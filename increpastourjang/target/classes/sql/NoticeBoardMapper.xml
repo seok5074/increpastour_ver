@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tour.increpas.package.tour.mapper">
+
+	<resultMap type="NoticeBoardVO" id="NoticeBoard_resmap">
+		<id property="n_board_idx" column="n_board_idx" />
+		<result property="n_board_title" column="n_board_title" />
+		<result property="n_board_contents" column="n_board_contents" />
+		<result property="n_board_regDate" column="n_board_regDate" />
+		<result property="n_board_views" column="n_board_views" />
+		<result property="n_board_file" column="n_board_file" />
+		<result property="n_board_writer" column="n_board_writer" />
+	</resultMap>
+
+	<select id="noticeBoardList" resultType="NoticeBoardVO" resultMap="NoticeBoard_resmap">
+		select
+		*
+		from noticeBoard
+		order by n_board_idx desc
+	</select>
+
+	<insert id="insertNoticeBoard" parameterType="NoticeBoardVO" useGeneratedKeys="true" keyProperty="n_board_idx">
+		INSERT INTO noticeBoard(n_board_title, n_board_contents, n_board_regDate, n_board_views, n_board_file, n_board_writer)
+		VALUES(#{n_board_title}, #{n_board_contents}, now(), 0, #{n_board_file}, #{n_board_writer})
+	</insert>
+</mapper>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tour.increpas.package.tour.mapper">
+	
+	<!-- 해외 여행 리스트 보기 -->
+	<select id="packageList" resultType="Package_tour_VO" resultMap="package_tour_resmap">
+		select 
+			*
+		from package_tour
+		order by package_tour_idx desc
+	</select>
+	
+	<select id="overSeaPackageDetail" resultType="Package_tour_VO" resultMap="package_tour_resmap">
+		select 
+			*
+		from package_tour
+		where package_tour_idx = #{package_tour_idx}
+	</select>
+	
+	
+	<!-- 국내여행 리스트보기 -->
+	<select id="package_do_List" resultType="Package_do_tour_VO" resultMap="package_do_tour_resmap">
+		select
+			*
+		from package_do_tour
+	</select>
+	
+	<select id="getBoard" resultType="Package_do_tour_VO" resultMap="package_do_tour_resmap">
+		select
+			*
+		from package_do_tour
+		where do_idx = #{do_idx}
+	</select>
+	
+	<!-- getRegion  #{do_region} -->
+	<select id="getRegion" resultType="Package_do_tour_VO" resultMap="package_do_tour_resmap">
+		SELECT 
+			*
+		 FROM package_do_tour
+		 WHERE do_region= #{do_region}
+	</select>  
+	
+	<!-- 맵 위도경도 조회 -->
+	<select id="map_List" resultType="Package_do_tour_VO" resultMap="package_do_map_resmap">
+		select
+			*
+		from emp
+	</select>
+	
+	<!-- 해외 여행  -->
+	<resultMap type="Package_tour_VO" id="package_tour_resmap">
+		<id property="package_tour_idx" column="package_tour_idx" />
+		<result property="package_tour_name" column="package_tour_name" />
+		<result property="package_tour_start_date" column="package_tour_start_date" />
+		<result property="package_tour_end_date" column="package_tour_end_date" />
+		<result property="package_tour_total" column="package_tour_total" />
+		<result property="package_tour_image" column="package_tour_image" />
+		<result property="package_tour_contents" column="package_tour_contents" />
+		<result property="package_tour_start" column="package_tour_start" />
+		<result property="package_tour_arrive" column="package_tour_arrive" />
+		<result property="package_tour_natname" column="package_tour_natname" />
+		<result property="package_tour_class" column="package_tour_class" />
+		<result property="package_tour_hotel_class" column="package_tour_hotel_class" />
+		<result property="package_tour_agency" column="package_tour_agency" />
+		<result property="package_tour_theme" column="package_tour_theme" />
+		<result property="package_tour_price" column="package_tour_price" />
+		<result property="package_tour_status" column="package_tour_status" />
+		<result property="package_tour_free" column="package_tour_free" />
+		<result property="package_tour_shopping" column="package_tour_shopping" />
+		<result property="package_tour_manager" column="package_tour_manager" />
+		<result property="package_tour_waypoint" column="package_tour_waypoint" />
+		<result property="package_tour_seatno" column="package_tour_seatno" />
+		<result property="package_tour_thumbnail" column="package_tour_thumbnail" />
+	</resultMap>
+	
+	<!-- 국내여행 -->
+	<resultMap type="Package_do_tour_VO" id="package_do_tour_resmap">
+		<id property="do_idx" column="do_idx" />
+		<result property="do_name" column="do_name" />
+		<result property="do_start_date" column="do_start_date" />
+		<result property="do_end_date" column="do_end_date" />
+		<result property="do_total" column="do_total" />
+		<result property="do_image" column="do_image" />
+		<result property="do_contents" column="do_contents" />
+		<result property="do_start" column="do_start" />
+		<result property="do_arrive" column="do_arrive" />
+		<result property="do_region" column="do_region"/>
+		<result property="do_bus" column="do_bus" />
+		<result property="do_busclass" column="pdo_busclass" />
+		<result property="do_air" column="do_air" />
+		<result property="do_airclass" column="do_airclass" />
+		<result property="do_hotel_class" column="do_hotel_class" />
+		<result property="do_busagency" column="do_busagency" />
+		<result property="do_airagency" column="do_airagency" />
+		<result property="do_theme" column="do_theme" />
+		<result property="do_price" column="do_price" />
+		<result property="do_status" column="do_status" />
+		<result property="do_free" column="do_free" />
+		<result property="do_shopping" column="do_shopping" />
+		<result property="do_manager" column="do_manager" />
+		<result property="do_seatno" column="do_seatno" />
+		<result property="do_thumbnail" column="do_thumbnail" />
+	</resultMap>
+	
+	<resultMap type="Package_do_tour_VO" id="package_do_map_resmap">
+		<id property="idx" column="idx"/>
+		<result property="area" column="area" />
+		<result property="location_lat" column="location_lat" />
+		<result property="location_lng" column="location_lng" />
+	</resultMap>
+</mapper>

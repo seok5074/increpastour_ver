@@ -1,0 +1,303 @@
+/* teset */
+@charset "UTF-8";
+
+* {
+	margin: 0;
+}
+/* 국내 메인페이지 중 */
+.domain {
+	width: 1000px;
+	height: 535px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.domesitcmainimg {
+	width: 1000px;
+	height: 550px;
+	position: absolute;
+	z-index: 1;
+	background-image: url(../images/domesiticmain.jpg);
+}
+
+.control-btn {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 2px 30px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.submapapi {
+	display: inline-block;
+	width: 550px;
+	height: 490px;
+	z-index: 2;
+	position: absolute;
+	margin-top: 26px;
+	border: 1px solid #DDDDD9;
+}
+
+.mapapi {
+	display: inline-block;
+	width: 550px;
+	height: 490px;
+	background-color: gray;
+	z-index: 2;
+	position: absolute;
+	border: 1px solid #DDDDD9;
+}
+
+.domaplist {
+	display: inline-block;
+	width: 404px;
+	height: 490px;
+	background-color: white;
+	z-index: 2;
+	position: absolute;
+	margin-top: 26px;
+	left: 55%;
+	border: 1px solid #DDDDD9;
+	overflow-y: hidden;
+	overflow-x: auto;
+}
+
+.subselectcity {
+	overflow: auto;
+	width: 404px;
+	height: 461px;
+}
+
+.domaplist_title {
+	text-align: center;
+	border-bottom: 2px solid gray;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.sublist_list {
+	width: 380px;
+	height: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	border-left: 6px solid #9797fd;
+	background-color: #c6c7cc;
+	margin-bottom: 3px;
+	/* overflow:scroll; 스크롤*/
+}
+
+.sublist_title {
+	color: #136ab9;
+	float: right;
+}
+
+.maindolisttitle{
+	margin-left: auto;
+	margin-right: auto;
+	width: 900px;
+}
+.do_menu {
+	position: absolute;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+.warntitle {
+	width: 1000px;
+	font-size: 12px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -15px;
+	margin-bottom: 20px;
+}
+
+.se_dolist {
+	text-decoration: none;
+	list-style-type: none;
+	list-style: none;
+	margin: 0px;
+	padding: 27px;
+	max-width: 900px;
+	width: 100%;
+}
+
+ul.se_dolist li {
+	display: inline-block;
+	padding: 10px;
+	margin-bottom: 5px;
+	border: 1px solid #efefef;
+	font-size: 12px;
+	cursor: pointer;
+	font-size: 17px;
+}
+
+.do_tab1 {
+	display: inline-block;
+	height: 5%;
+	border: groove;
+	border-width: 1px 1px 4px 1px;
+	cursor: pointer;
+}
+
+.do_tab2 {
+	display: inline-block;
+	height: 5%;
+	border: groove;
+	border-width: 1px 1px 4px 1px;
+	cursor: pointer;
+}
+
+.dolist {
+	display: inline-block;
+	width: 470px;
+	height: 490px;
+	background-color: gray;
+	z-index: 3;
+	position: absolute;
+	right: 400px;
+	margin-top: 26px;
+	border: 1px solid #DDDDD9;
+	height: 490px;
+}
+
+.banner {
+	height: 150px;
+}
+
+.banner-do {
+	width: 1000px;
+	height: 100px;
+	background-color: gray;
+	z-index: 3;
+	border: 1px solid #DDDDD9;
+	left: 480px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.maindolist {
+	width: 900px;
+	height: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: auto;
+}
+
+.maindolist_title {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sublist {
+	padding-top: 60px;
+	display: inline-block;
+	width: 900px;
+	height: 800px;
+	position: absolute;
+	background-color: #4a505d;
+	color: #fff;
+}
+
+#main_box {
+	width: 700px;
+	height: auto;
+	margin: auto;
+}
+
+#title {
+	text-align: center;
+	margin: 20px;
+}
+
+hr {
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+/* 메인 페이지 리스트 */
+.visit_type {
+	position: relative;
+	padding-left: 1px;
+	padding-right: 1px;
+	border: 1px solid #c2c5c8;
+	border-bottom: 1px solid #a5a8aa;
+	box-shadow: 0 1px 5px rgb(220, 220, 220);
+	padding-top: 12px;
+	margin-bottom: 17px;
+	height: 125px;
+}
+
+.do_title {
+	color: #ff8888;
+	border-bottom: 2px solid #c0c0c0;
+}
+
+.content_type {
+	background: aqua;
+	min-height: 100px;
+	height: auto; /* 자동증가 */
+	padding: 5px;
+	border: 1px 1px 1px black;
+}
+
+.do_theme {
+	float: right;
+	font-size: 17px;
+}
+
+.thumimage {
+	width: 159px;
+	height: 100px;
+	float: left;
+	padding: 4px;
+}
+
+.tot_price {
+	border-bottom: 3px solid aqua;
+	float: right;
+	padding-right: 9px;
+	color: #ff8000;
+}
+
+.name_type {
+	background: #ffff80;
+	min-height: auto;
+	height: auto; /* 자동증가 */
+	padding: 5px;
+	border: 1px 1px 1px black;
+}
+
+.regdate_type {
+	background: #ff80ff;
+	min-height: auto;
+	height: auto; /* 자동증가 */
+	padding: 5px;
+	/* 	border:  1px 1px 1px black;
+ */
+}
+
+span {
+	display: inline-block;
+	width: 80px;
+	text-align: right;
+}
+
+.buttons {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	padding: 5px;
+}
+
+#wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	padding: 5px;
+}

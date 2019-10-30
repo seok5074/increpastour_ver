@@ -1,0 +1,232 @@
+@charset "UTF-8";
+
+.mainForm{
+	width: 1400px;
+    height: 400px;
+    margin: auto;
+    margin-top: 25px;
+    
+}
+.leftBanner{
+	width:65%;
+	height:100%;
+	float:left;
+	display:inline-block;
+}
+
+.menu{
+	width: 100%;
+    height: 40px;
+}
+
+.menuSub1{
+	width: 250px;
+    height: 100%;
+    float: left;
+    display: inline-block;
+}
+
+.menuSub1 p{
+    font-size: 23px;
+    bottom: 0px;
+}
+
+.menuSub2{
+	float: left;
+    display: inline-block;
+    width: 650px;
+    height: 100%;
+}
+.menuSub2 p{
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+
+.subForm{
+	width: 160px;
+    height: 300px;
+    float: left;
+    display: inline-block;
+    margin-left: 25px;
+    margin-top: 10px;
+    overflow: hidden;
+	
+}
+
+.backImg{
+	position:absolute;	
+	width: 160px;
+    height: 300px;
+}
+
+#backImg1{
+	background-image:url("../images/packageSelect/150X200_1.jpg");
+}
+#backImg2{
+	background-image:url("../images/packageSelect/150X200_1.jpg");
+}
+#backImg3{
+	background-image:url("../images/packageSelect/150X200_1.jpg");
+}
+#backImg4{
+	background-image:url("../images/packageSelect/150X200_1.jpg");
+}
+#backImg5{
+	background-image:url("../images/packageSelect/150X200_1.jpg");
+}
+
+
+
+.no{
+	width: 64px;
+    height: 24px;
+    background: #e27ce8;
+    float: right;
+    margin-top: 2px;
+    margin-right: 3px;
+    color: #fff;
+    opacity: 0.9;
+    text-align:center;
+}
+
+#subForm1{
+	margin-left: 0px;
+}
+
+#subForm2{
+}
+
+#subForm3{
+}
+
+#subForm4{
+}
+
+#subForm5{
+}
+
+
+
+.textForm{
+	width: 100%;
+    height: 250px;
+    text-align: center;
+    background: #fff;
+    margin-top: 255px;
+    opacity: 0.9;
+    
+}
+
+
+#title{
+	font-size: 15px;
+    font-weight: bold;
+    margin-top: 4px;
+    display: inline-block;
+}
+
+#explain{
+	margin-top: 7px;
+    font-size: 12px;
+}
+
+.button{
+	width: 70%;
+    height: 25px;
+    margin: auto;
+    margin-top: 10px;
+    background: #52b2be;
+    color: #fff;
+}
+.button a{
+	color:#fff;
+}
+
+
+/*--------------오른쪽 배너입니다.--------------------  */
+.rightBanner{
+	width: 35%;
+    height: 100%;
+    float: right;
+    display: inline-block;
+	overflow: hidden; 
+    position: relative;    
+    
+}
+.bannerBox{
+	width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+}
+
+.banner{
+	width: 490px;
+    height: 345px;
+    position: absolute;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 20px;
+    
+}
+
+#banner1{
+	background-image:url("../images/packageSelect/500x400_1.jpg");
+	z-index:5;
+}
+
+#banner2{
+	background-image:url("../images/packageSelect/500x400_2.jpg");
+	z-index:4;
+}
+
+#banner3{
+	background-image:url("../images/packageSelect/500x400_3.png");
+	z-index:3;
+}
+
+
+
+
+#lBtn{
+	color: #fff;
+	cursor:pointer;
+	margin-top:176px;
+	opacity:0.5;
+	transition:all 0.6s ease-in-out;
+	float:left;	
+	margin-left: 35px;
+	z-index:1;
+	
+}
+#rBtn{
+	
+	color: #fff;
+	cursor:pointer;
+	margin-top:176px;
+	opacity:0.5;
+	transition:all 0.6s ease-in-out;
+	float:right;
+	margin-right:20px;
+	z-index:1;
+}
+
+#lBtn:hover{
+	font-size:25px;
+	opacity:1;
+	margin-top:166px;
+}
+
+#rBtn:hover{
+	
+	font-size:25px;
+	opacity:1;
+	margin-top:166px;
+}
+
+
+
+

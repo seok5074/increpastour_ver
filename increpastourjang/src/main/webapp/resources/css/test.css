@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.contents_background {
+	width: 100%;
+	height: 30%;
+}
+
+.contents {
+	/* 테스트용 css */
+	width: 70%;
+	height: 100%;
+	margin-left: 15%;
+	/* background-color: #4a505d; */
+	/* color: #fff; */
+	/* margin-left: 15%; */
+}
+
+.packageDetail {
+	
+}
+
+.hover {
+	background-color: #fff;
+	color: #000;
+}
+
+.viewDetail {
+	background-color: #e85581;
+	border: 0px;
+	color: #fff;
+	display: none;
+}
+
+.detailContents {
+	position: relative;
+	left: 43%;
+	bottom: 350px;
+}
+
+.statusPossible {
+	text-align: center;
+	position: relative;
+	left: 45%;
+	bottom: 200px;
+	width: 50%;
+	height: 15%;
+}
+
+.statusImpossible {
+	text-align: center;
+	position: relative;
+	left: 45%;
+	bottom: 200px;
+	width: 50%;
+	height: 15%;
+}
+
+.where {
+	display: block;
+	margin: 25px 15px;
+	font-size: 11px;
+	color: #000;
+	text-decoration: none;
+	font-family: verdana;
+	font-style: italic;
+}
+
+.textbox {
+	position: relative;
+	width: 99%;
+	/* margin: 15px */
+}
+
+.textbox label {
+	position: absolute;
+	/* top: 1px; input 요소의 border-top 설정값 만큼 */
+	/* left: 1px; input 요소의 border-left 설정값 만큼 */
+	padding: .8em .5em; /* input 요소의 padding 값 만큼 */
+	color: #999;
+	cursor: text;
+}
+
+.textbox input[type="text"], .textbox input[type="password"] {
+	width: 100%; /* 원하는 너비 설정 */
+	height: auto; /* 높이값 초기화 */
+	line-height: normal; /* line-height 초기화 */
+	padding: .8em .5em; /* 원하는 여백 설정, 상하단 여백으로 높이를 조절 */
+	border: 1px solid #999;
+	border-radius: 0; /* iSO 둥근모서리 제거 */
+	outline-style: none; /* 포커스시 발생하는 효과 제거를 원한다면 */
+	-webkit-appearance: none; /* 브라우저별 기본 스타일링 제거 */
+	-moz-appearance: none;
+	appearance: none;
+}
+
+example_f {
+	border-radius: 4px;
+	background: linear-gradient(to right, #67b26b, #4ca2cb) !important;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 22px;
+	padding: 20px;
+	width: 200px;
+	transition: all 0.4s;
+	cursor: pointer;
+	margin: 5px;
+}
+
+.example_f span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.4s;
+}
+
+.example_f span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.example_f:hover span {
+	padding-right: 25px;
+}
+
+.example_f:hover span:after {
+	opacity: 1;
+	right: 0;
+}

@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+/* 전체적용  */
+* {
+	margin:0px;
+	padding:0px;
+	text-decoration:none;
+}
+
+
+
+
+/* footer css 입니다 . */
+
+footer{
+	bottom:0px;
+	margin-top:30px;
+	margin-bottom:5px;
+}
+
+.footerBackground{
+	background:#e6e6e6;
+	width:1400px;
+	height:230px;
+	text-align:center;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.footerMenu{
+    width: 1400px;
+    height: 30px;
+    text-align: center;
+    border-bottom:1px solid #c0c0c0;
+}
+.footerMenu a{
+	color:#808080;
+	padding-left:30px;
+	padding-right:30px;
+	
+}
+
+.footerInfo{
+	width: 1400px;
+    height: 150px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.footerLogo{
+	width: fit-content;
+    float: left;
+    margin-left: 30px;
+    margin-top: 40px;
+}
+
+.footertext{
+	color:#808080;
+	text-align: left;
+	width: fit-content;
+	float: left;
+	margin-left: 80px;
+	margin-top: 10px;
+}
+
+
+.footerIcon{
+	height:fit-content;
+	margin-top:10px;
+	
+}
+
+.footerIcon i{
+	color: #808080;
+	margin-left:40px;
+	margin-right:40px;
+	cursor: pointer;
+	display:inline-block;
+}
+	/* 여기까지 footer css입니다. */

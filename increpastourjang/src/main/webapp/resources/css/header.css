@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+* {
+	margin:0px;
+	padding:0px;
+	text-decoration:none;
+}
+
+/* header 적용 css */
+
+header{
+	margin-left:auto;
+	margin-right:auto;
+	width:1200px;
+	height:130px;
+	
+	
+}
+
+.ibackground{
+	width:100%;
+
+	
+}
+.liconSection{
+	float:left;
+	width:35%;
+	height:70px;
+	text-align: center;
+}
+.riconSection{
+	float:right;
+	width:35%;
+	height:70px;
+	text-align: center;
+	
+}
+
+.liconSection i{
+	font-size: 40px;
+    padding: 18px;
+    cursor: pointer;	
+    color: #1b5ac2;
+}
+
+.riconSection i{
+	font-size: 40px;
+    padding: 18px;
+    cursor: pointer;	
+    color: #1b5ac2;
+}
+.container{
+	display:inline-block;
+	width:100%;
+	height:40px;
+	
+	
+}
+
+
+.logo {
+	display:inline-block;
+	position:absolute;
+	top:10px;
+	height:fit-content;
+	left:50%;
+	margin-left:-140px; 
+	
+	
+}
+
+
+.left_menu{
+	position: relative;
+	margin-left:3px;
+	top:30%;
+	float:left;
+	
+}
+
+.right_menu{
+	
+	position: relative;
+	margin-right:3px;
+	top:30%;
+	float:right;
+	
+}
+
+
+/*-----------------------고정메뉴css 시작--------------------------*/
+
+	/* 빼꼼하고 나와있는 돌출형 메뉴입니다.  */
+.btn_click{
+	
+	
+}
+.btn_click .click{
+	
+}
+
+.btn_menu{
+	position: fixed;
+    right: 0;
+    top: 60px;
+    width: 65px;
+    height: 70px;
+    display: block;
+    text-align: center;
+    border: 0;
+    background-color: #1f4c97;
+    color: #ffffff;	
+    cursor: pointer;
+	
+}
+
+.btn_menu .bar{
+	position: absolute;
+    top: 22px;
+    left: 23px;
+    display: inline-block;
+    width: 19px;
+    height: 3px;
+    background-color: #fff;
+    content: '';
+	
+}
+.btn_menu .bar::before{
+	position: absolute;
+    top: -7px;
+    left: 0px;
+    display: inline-block;
+    width: 19px;
+    height: 3px;
+    background-color: #fff;
+    content: '';
+}
+.btn_menu .bar::after{
+		position: absolute;
+    top: 7px;
+    left: 0px;
+    display: inline-block;
+    width: 19px;
+    height: 3px;
+    background-color: #fff;
+    content: '';
+	
+}
+
+.btn_menu .blind{
+	
+	width: auto;
+    height: auto;
+    line-height: inherit;
+    visibility: inherit;
+    position: absolute;
+    top: 42px;
+    left: 0;
+    right: 0;
+    display: block;
+    font-size: 12px;
+    color: #fff;
+	
+}
+	/* 여기까지 빼꼼하고 나와있는 돌출형 메뉴입니다. */
+
+	/* 고정메뉴 누르면펼쳐지는 메뉴 */
+.hiddenMenu{
+	position: fixed;
+    right: 0;
+    top: 130px;
+    width: 65px;
+    height: 0px;
+    display: block;
+    text-align: center;
+    border: 0;
+    background-color: #1f4c97;
+    color: #ffffff;
+    overflow:hidden;
+}
+
+.hiddenMenuButton{
+	width: 90%;
+    height: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    cursor: pointer;
+	
+}
+.hiddenMenuButton i{
+	font-size:30px;
+	
+}
+.hiddenMenuButton a{
+	display: inline-block;
+    font-size: 13px;
+    color: #fff;
+}
+	/*---------------------------고정메뉴css 끝------------------------*/
+
+
+
+/*여기까지 HEADER CSS였습니다. */
