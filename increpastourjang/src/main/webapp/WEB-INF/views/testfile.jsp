@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- 최태환 주석처리 확인 테스트  -->
 	<div class="mg_b12">
 		<a href="./dg_detail.asp?gdscode=DGI003835"
 			title="[하나강산][경북소셜문화관광]  영주 부석사 무량수전, 무섬마을, 천연염색체험 가을 단풍명소 당일여행">
