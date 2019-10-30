@@ -135,6 +135,13 @@ public class IncrepasTourController {
 
 		return "eventpage/roulettepage";
 	}
+	
+	// 전체검색 페이지 
+	@RequestMapping(value= {"allsearchresult"},method=RequestMethod.GET)
+	public String index9(Model model) {
+		
+		return "allsearchresult"; 
+	}
 
 	// 공지사항 게시판
 	@RequestMapping(value = { "/noticeBoardList", "/noticeList" }, method = RequestMethod.GET)

@@ -66,7 +66,7 @@
 			
 			<!-- 제일 탑부분의 아이콘 8개 부분중 오른쪽입니다 -->
 			<div class="riconSection">
-			<i class="fa fa-gift" aria-hidden="true"><a href="링크주소넣어주세요"></a></i> 
+			<a href="allsearchresult"><i class="fa fa-gift" aria-hidden="true"></i> </a>
 			<i class="fa fa-shopping-cart" aria-hidden="true"><a href="링크주소넣어주세요"></a></i> 
 			<i class="fa fa-envelope-open" aria-hidden="true"><a href="링크주소넣어주세요"></a></i> 
 			<i class="fa fa-user-circle-o" aria-hidden="true"><a href="링크주소넣어주세요"></a></i> 
