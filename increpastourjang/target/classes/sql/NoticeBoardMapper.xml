@@ -14,15 +14,73 @@
 		<result property="n_board_writer" column="n_board_writer" />
 	</resultMap>
 
-	<select id="noticeBoardList" resultType="NoticeBoardVO" resultMap="NoticeBoard_resmap">
+	<!-- 공지사항 게시판 불러오기 -->
+	<select id="noticeBoardList" resultType="NoticeBoardVO" parameterType="hashmap">
 		select
-		*
+		n_board_idx,
+		n_board_title,
+		n_board_contents,
+		n_board_regDate,
+		n_board_views,
+		n_board_file,
+		n_board_writer
 		from noticeBoard
+		<where>
+			<if test="category == 'n_board_idx'">
+				n_board_idx LIKE CONCAT('%', #{keyword}, '%')
+			</if>
+			<if test="category == 'n_board_title'">
+				n_board_title LIKE CONCAT('%', #{keyword}, '%')
+			</if>
+			<if test="category == 'n_board_contents'">
+				n_board_contents LIKE CONCAT('%', #{keyword}, '%')
+			</if>
+		</where>
 		order by n_board_idx desc
+		LIMIT #{startRow}, #{num}
+	</select>
+	
+	<select id="getNoticeBoardCount" resultType="int">
+		select count(*) 
+		from noticeBoard
+		<where>
+			<if test="category == 'n_board_idx'">
+				n_board_idx LIKE CONCAT('%', #{keyword}, '%')
+			</if>
+			<if test="category == 'n_board_title'">
+				n_board_title LIKE CONCAT('%', #{keyword}, '%')
+			</if>
+			<if test="category == 'n_board_contents'">
+				n_board_contents LIKE CONCAT('%', #{keyword}, '%')
+			</if>
+		</where>
 	</select>
 
-	<insert id="insertNoticeBoard" parameterType="NoticeBoardVO" useGeneratedKeys="true" keyProperty="n_board_idx">
+	<!-- 공지사항 게시판 작성하기 -->
+	<insert id="insertNoticeBoard" parameterType="NoticeBoardVO" useGeneratedKeys="true">
 		INSERT INTO noticeBoard(n_board_title, n_board_contents, n_board_regDate, n_board_views, n_board_file, n_board_writer)
-		VALUES(#{n_board_title}, #{n_board_contents}, now(), 0, #{n_board_file}, #{n_board_writer})
+		VALUES(#{n_board_title}, #{n_board_contents}, now(), 0, #{n_board_file}, "관리자")
 	</insert>
+	
+	<!-- 공지사항 게시판 삭제하기 -->
+	<delete id="deleteNoticeBoard">
+		delete from noticeBoard where n_board_idx = #{n_board_idx}
+	</delete>
+	
+	<!-- 공지사항 게시판 자세히보기  -->
+	<select id="noticeBoardDetail" resultType="NoticeBoardVO" resultMap="NoticeBoard_resmap">
+		select 
+		*
+		from noticeBoard
+		where n_board_idx = #{n_board_idx}
+	</select>
+	
+	<!-- 공지사항 게시판 수정하기 -->
+	<update id="updateNoticeBoard" parameterType="NoticeBoardVO">
+		update noticeBoard 
+		set n_board_title = #{n_board_title}, 
+		n_board_contents = #{n_board_contents}, 
+		n_board_file = #{n_board_file}
+		where n_board_idx = #{n_board_idx}
+	</update>
 </mapper>
